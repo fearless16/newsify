@@ -1,0 +1,131 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  /* background-color: rgb(240, 235, 235) !important; */
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #000;
+  margin: 10px;
+  padding: 0;
+}
+
+.slider-box{
+ transform: translateX(20%);
+  height:40%;
+  width:70%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-top : 30px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide h3{
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background : black;
+  z-index: 100;
+  bottom:2%;
+  padding:1%;
+  left:50%;
+  transform:translate(-50%,-50%)
+}
+/* Trending News Container */
+
+
+.trending-news{
+  margin:1%;
+  padding:2%;
+  display : grid;
+  grid-template-columns: repeat( auto-fit, minmax(19.5%, 1fr) );;
+  margin-top : 1%;
+}
+
+
+.card-body a{
+  position: absolute;
+  right : 2%;
+  bottom : 1%;
+}
+
+#blur.active{
+  filter : blur(20px);
+  pointer-events : none;
+  user-select: none;
+  scroll-behavior: none;
+
+}
+
+#blur.active body{
+  overflow: hidden;
+}
+
+.tags{
+  display : flex;
+  margin-left : 10px;
+  margin-right : 10px;
+  flex-direction: row;
+  align-items:space-between;
+  justify-content:space-around;
+}
+
+.card-link{
+  cursor: pointer;
+}
+
+.search-nav{
+  display : flex !important;
+  justify-content: space-between;
+  align-items: flex-end !important;
+}
+
+
+.nav-load{
+  animation : nav-load-animation 400ms ease-in;
+}
+
+@keyframes nav-load-animation {
+    0%{
+      transform : translateY(-100%)
+    }
+    100%{
+      transform : translateY(0)
+    }
+}
+
+.nav-load{
+  animation : nav-load-animation 400ms ease-in;
+}
